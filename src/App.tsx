@@ -4,8 +4,8 @@ import Content from './components/Content';
 function App() {
 
   return (
-    <div className="font-sans min-h-screen bg-black">
-      <main className='max-w-3xl min-h-screen mx-auto text-text flex flex-col items-center'>
+    <div className="font-sans min-h-screen bg-black overflow-y-hidden">
+      <main className='max-w-3xl h-full m-auto w-full text-text flex flex-col items-center'>
         <Navbar />
         <Content /> 
       </main>
@@ -14,3 +14,4 @@ function App() {
 }
 
 export default App
+
