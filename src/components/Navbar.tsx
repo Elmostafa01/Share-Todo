@@ -3,8 +3,8 @@ function Navbar() {
   return (
     <nav className="bg-black w-full flex items-center justify-between px-4 h-16">
       <div className="logo text-xl font-semibold text-secondary cursor-pointer">
-        <span>Share</span>
-        <span className="text-primary">Todo</span>
+        <span>Next</span>
+        <span className="text-primary">Step</span>
       </div>
       <div className="in-out flex items-center gap-4 text-secondary">
         <button>register</button>

@@ -1,9 +1,8 @@
-
 function Todos() {
   return (
     <div className="mt-6 pb-10">
-      <ul className="flex flex-col gap-3">
-        {Array.from({ length: 3 }).map((_, i) => (
+      <ul className="flex flex-col gap-3 ">
+        {Array.from({ length:3 }).map((_, i) => (
           <li key={i} className="bg-gray transition-all border border-secondary/30 cursor-pointer rounded-xl px-4 py-4 flex items-center justify-between gap-4">
               <label className='flex items-center gap-2'>
               <div className="checkbox-wrapper-12">
@@ -23,7 +22,7 @@ function Todos() {
                     </defs>
                 </svg>
               </div>
-                  <span className='cursor-pointer w-[20rem] text-sm md:text-base'>
+                  <span className='cursor-pointer max-w-fit text-sm md:text-base'>
                     {` task ${i + 1}`}
                   </span>
               </label>

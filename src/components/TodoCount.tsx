@@ -1,8 +1,8 @@
 function TodoCount() {
   return (
-    <div className="select-none mt-6 flex items-center justify-around gap-10 border-2 border-secondary/20 rounded-3xl px-10 py-8 w-full">
+    <div className="select-none mt-6 flex items-center gap-10 border-2 border-secondary/20 rounded-3xl px-10 py-8 w-fit mx-auto">
       <div>
-        <p className="font-bold text-2xl">Todo Done</p>
+        <p className="font-bold text-2xl">Tasks Done</p>
         <p className="font-extralight text-secondary/80">Keep it up</p>
       </div>
       <div className="flex justify-center items-center bg-primary text-black rounded-full p-8">

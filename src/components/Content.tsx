@@ -4,7 +4,7 @@ import Todos from "./Todos"
 
 function Content() {
   return (
-    <div className="flex flex-col gap-4 relative">
+    <div className="flex flex-col gap-4">
       <TodoCount />
       <Input />
       <Todos />
