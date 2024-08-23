@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div className="font-sans min-h-screen bg-black overflow-y-hidden">
-      <main className='max-w-xl h-full m-auto w-full text-text flex flex-col items-center'>
+      <main className='max-w-lg h-full m-auto w-full text-text flex flex-col items-center'>
         <Navbar />
         <Content /> 
       </main>
