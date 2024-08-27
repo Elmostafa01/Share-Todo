@@ -1,8 +1,9 @@
 function DeleteButton({setTodos, id}) {
   return (
     <button 
-    onClick={() => {
-        setTodos((prev) => prev.filter((todo) => todo.id !== id))
+      onClick={(e) => {
+        e.stopPropagation();
+        setTodos((prev) => prev.filter((todo) => todo.id !== id));
       }}
       className='delete bg-black/30 hover:bg-black/90 p-1 rounded-full active:scale-90 transition-all'
     >

@@ -1,7 +1,7 @@
 
-function Navbar() {
+function Navbar({todos, setTodos}) {
   return (
-    <nav className="bg-black w-full flex items-center justify-between px-4 h-16">
+    <nav className="bg-black w-full flex items-center justify-between h-16">
       <div className="logo text-xl font-semibold text-secondary cursor-pointer">
         <span>Next</span>
         <span className="text-primary">Step</span>
