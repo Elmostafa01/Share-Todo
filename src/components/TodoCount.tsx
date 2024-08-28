@@ -1,11 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+import { Todo } from '../types';
 
-interface Todo {
-  id: number;
-  title: string;
-  completed: boolean;
-}
 
 interface TodoCountProps {
   todos: Todo[];
@@ -32,7 +28,7 @@ function TodoCount({ todos }: TodoCountProps): React.ReactElement {
           fontSize: '16px',
           fontWeight: 'semibold',
         },
-        duration: 5000,
+        duration: 2500,
       });
       hasShownToastRef.current = true;
     } else if (completionPercentage < 100) {

@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Content from './components/Content';
-
-interface Todo {
-  id: number;
-  title: string;
-  completed: boolean;
-}
+import { Todo } from '../src/types';
 
 function App(): React.ReactElement {
   const [todos, setTodos] = useState<Todo[]>([]); 

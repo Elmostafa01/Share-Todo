@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+import { Todo } from '../types';
 
-interface Todo {
-  id: number;
-  title: string;
-  completed: boolean;
-}
+
 
 interface InputProps {
   todos: Todo[];

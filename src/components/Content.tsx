@@ -2,12 +2,9 @@ import React from 'react';
 import Input from "./Input"
 import TodoCount from "./TodoCount"
 import Todos from "./Todos"
+import { Todo } from '../types';
 
-interface Todo {
-  id: number;
-  title: string;
-  completed: boolean;
-}
+
 
 interface ContentProps {
   todos: Todo[];

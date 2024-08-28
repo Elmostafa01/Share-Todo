@@ -1,8 +1,15 @@
-import DeleteButton from './DeleteButton'
+import React from 'react';
+import DeleteButton from './DeleteButton';
+import { Todo } from '../types';
 
-function Todos({todos, setTodos}) {
+interface TodosProps {
+  todos: Todo[];
+  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
+}
+
+const Todos: React.FC<TodosProps> = ({ todos, setTodos }) => {
   
-  const handleClick = (id) => {
+  const handleClick = (id: number) => {
     setTodos(todos.map((t) => {
       if (t.id === id) {
         return { ...t, completed: !t.completed };
@@ -13,13 +20,13 @@ function Todos({todos, setTodos}) {
 
   return (
     <div className="mt-6 pb-10">
-      <ul className="flex flex-col gap-3 ">
-        {todos.length === 0 && <p className="text-center text-text/50">No task yet</p> }
+      <ul className="flex flex-col gap-3">
+        {todos.length === 0 && <p className="text-center text-text/50">No task yet</p>}
         {todos.map((todo) => (
           <li 
-          key={todo.id} 
-          className="bg-gray transition-all border border-secondary/30 cursor-pointer rounded-xl px-4 flex items-center justify-between gap-4"
-          onClick={() => handleClick(todo.id)}
+            key={todo.id} 
+            className="bg-gray transition-all border border-secondary/30 cursor-pointer rounded-xl px-4 flex items-center justify-between gap-4"
+            onClick={() => handleClick(todo.id)}
           >
             <label className='py-4 flex items-center w-full gap-2 cursor-pointer'>
               <div className="checkbox-wrapper-12">
@@ -28,7 +35,8 @@ function Todos({todos, setTodos}) {
                       type="checkbox" 
                       id={`cbx-${todo.id}`} 
                       checked={todo.completed}
-                      onClick={(e) => e.stopPropagation()}
+                      onClick={(e: React.MouseEvent<HTMLInputElement>) => e.stopPropagation()}
+                      onChange={() => {}} 
                     />
                     <label htmlFor={`cbx-${todo.id}`}></label>
                     <svg fill="none" viewBox="0 0 15 14" height="14" width="15">
@@ -48,7 +56,7 @@ function Todos({todos, setTodos}) {
                 {todo.title}
               </span>
             </label>
-            <DeleteButton setTodos={setTodos} id={todo.id}/> 
+            <DeleteButton setTodos={setTodos} id={todo.id} /> 
           </li>
         ))}
       </ul>
@@ -56,4 +64,4 @@ function Todos({todos, setTodos}) {
   )
 }
 
-export default Todos
+export default Todos;
